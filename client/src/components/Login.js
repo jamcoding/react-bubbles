@@ -25,7 +25,7 @@ class Login extends React.Component {
   login = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/login")
+      .post("/login", this.state.credentials)
       .then(response => {
         console.log("login.js: login: success: response: ", response);
         localStorage.setItem("token", response.data.payload);
@@ -39,7 +39,7 @@ class Login extends React.Component {
     <div>
       <h1>Welcome to the Bubble App!</h1>
       <p>Build a login page here</p>
-      <form>
+      <form onSubmit={this.login}>
         <input 
           type="text"
           name="username"
