@@ -20,6 +20,39 @@ body,
   }
 }
 
+.login {
+  margin: 4rem auto 0;
+
+  form {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1rem 0;
+
+    input[type="text"], input[type="password"] {
+      margin: 0.5rem auto;
+      width: 90%;
+      padding: 5px;
+      border: none;
+      border-bottom: thin solid black;
+      outline: none;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+      border-bottom: thin solid #3a7f8f;
+    }
+
+    button {
+      width: 93%;
+      margin: 0.5rem auto;
+      padding: 5px 0;
+    }
+
+    button:active {
+      box-shadow: 0 0px 6px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+}
+
 .spacer {
   height: 100%;
 }
